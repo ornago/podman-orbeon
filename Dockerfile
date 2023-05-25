@@ -1,6 +1,7 @@
 FROM tomcat:9.0.75-jre17
 
 RUN apt update && apt install unzip -y && \
+    wget --no-verbose -O /usr/local/tomcat/lib/postgresql.jar https://jdbc.postgresql.org/download/postgresql-42.6.0.jar && \
     wget --no-verbose -O /tmp/orbeon.zip "https://github.com/orbeon/orbeon-forms/releases/download/tag-release-2022.1-ce/orbeon-2022.1.202212310353-CE.zip" && \
     cd /tmp && unzip orbeon.zip && \
     mkdir deploy && cd deploy && \
