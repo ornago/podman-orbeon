@@ -9,5 +9,5 @@ RUN apt update && apt install unzip -y && \
     mv /tmp/deploy /usr/local/tomcat/webapps/orbeon && \
     rm -rf /tmp/orbeon.zip /tmp/deploy /var/cache/apt
 
-EXPOSE 8080
+EXPOSE 9443
 CMD ["catalina.sh", "run"]
